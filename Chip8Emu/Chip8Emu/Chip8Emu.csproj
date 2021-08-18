@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9218162-E002-4AC8-A2A2-06566BF096BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chip8Emu</RootNamespace>
+    <AssemblyName>Chip8Emu</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CPU.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="games\15 Puzzle [Roger Ivie].txt" />
+    <Content Include="games\Animal Race [Brian Astle].txt" />
+    <Content Include="games\Astro Dodge [Revival Studios, 2008].txt" />
+    <Content Include="games\Biorhythm [Jef Winsor].txt" />
+    <Content Include="games\Blitz [David Winter].txt" />
+    <Content Include="games\Bowling [Gooitzen van der Wal].txt" />
+    <Content Include="games\Breakout %28Brix hack%29 [David Winter, 1997].txt" />
+    <Content Include="games\Breakout [Carmelo Cortez, 1979].txt" />
+    <Content Include="games\Brick %28Brix hack, 1990%29.txt" />
+    <Content Include="games\Coin Flipping [Carmelo Cortez, 1978].txt" />
+    <Content Include="games\Connect 4 [David Winter].txt" />
+    <Content Include="games\Craps [Camerlo Cortez, 1978].txt" />
+    <Content Include="games\Deflection [John Fort].txt" />
+    <Content Include="games\Guess [David Winter] %28alt%29.txt" />
+    <Content Include="games\Guess [David Winter].txt" />
+    <Content Include="games\Hi-Lo [Jef Winsor, 1978].txt" />
+    <Content Include="games\Hidden [David Winter, 1996].txt" />
+    <Content Include="games\Kaleidoscope [Joseph Weisbecker, 1978].txt" />
+    <Content Include="games\Lunar Lander [Udo Pernisz, 1979].txt" />
+    <Content Include="games\Mastermind FourRow %28Robert Lindley, 1978%29.txt" />
+    <Content Include="games\Merlin [David Winter].txt" />
+    <Content Include="games\Most Dangerous Game [Peter Maruhnic].txt" />
+    <Content Include="games\Nim [Carmelo Cortez, 1978].txt" />
+    <Content Include="games\Pong [Paul Vervalin, 1990].txt" />
+    <Content Include="games\Programmable Spacefighters [Jef Winsor].txt" />
+    <Content Include="games\Reversi [Philip Baltzer].txt" />
+    <Content Include="games\Rush Hour [Hap, 2006].txt" />
+    <Content Include="games\Russian Roulette [Carmelo Cortez, 1978].txt" />
+    <Content Include="games\Sequence Shoot [Joyce Weisbecker].txt" />
+    <Content Include="games\Shooting Stars [Philip Baltzer, 1978].txt" />
+    <Content Include="games\Slide [Joyce Weisbecker].txt" />
+    <Content Include="games\Space Intercept [Joseph Weisbecker, 1978].txt" />
+    <Content Include="games\Space Invaders [David Winter] %28alt%29.txt" />
+    <Content Include="games\Space Invaders [David Winter].txt" />
+    <Content Include="games\Spooky Spot [Joseph Weisbecker, 1978].txt" />
+    <Content Include="games\Submarine [Carmelo Cortez, 1978].txt" />
+    <Content Include="games\Sum Fun [Joyce Weisbecker].txt" />
+    <Content Include="games\Syzygy [Roy Trevino, 1990].txt" />
+    <Content Include="games\Tank.txt" />
+    <Content Include="games\Tetris [Fran Dachille, 1991].txt" />
+    <Content Include="games\UFO [Lutz V, 1992].txt" />
+    <Content Include="games\Worm V4 [RB-Revival Studios, 2007].txt" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="games\15 Puzzle [Roger Ivie] %28alt%29.ch8" />
+    <None Include="games\15 Puzzle [Roger Ivie].ch8" />
+    <None Include="games\Addition Problems [Paul C. Moews].ch8" />
+    <None Include="games\Airplane.ch8" />
+    <None Include="games\Animal Race [Brian Astle].ch8" />
+    <None Include="games\Astro Dodge [Revival Studios, 2008].ch8" />
+    <None Include="games\Biorhythm [Jef Winsor].ch8" />
+    <None Include="games\Blinky [Hans Christian Egeberg, 1991].ch8" />
+    <None Include="games\Blinky [Hans Christian Egeberg] %28alt%29.ch8" />
+    <None Include="games\Blitz [David Winter].ch8" />
+    <None Include="games\Bowling [Gooitzen van der Wal].ch8" />
+    <None Include="games\Breakout %28Brix hack%29 [David Winter, 1997].ch8" />
+    <None Include="games\Breakout [Carmelo Cortez, 1979].ch8" />
+    <None Include="games\Brick %28Brix hack, 1990%29.ch8" />
+    <None Include="games\Brix [Andreas Gustafsson, 1990].ch8" />
+    <None Include="games\Cave.ch8" />
+    <None Include="games\Coin Flipping [Carmelo Cortez, 1978].ch8" />
+    <None Include="games\Connect 4 [David Winter].ch8" />
+    <None Include="games\Craps [Camerlo Cortez, 1978].ch8" />
+    <None Include="games\Deflection [John Fort].ch8" />
+    <None Include="games\Figures.ch8" />
+    <None Include="games\Filter.ch8" />
+    <None Include="games\Guess [David Winter] %28alt%29.ch8" />
+    <None Include="games\Guess [David Winter].ch8" />
+    <None Include="games\Hi-Lo [Jef Winsor, 1978].ch8" />
+    <None Include="games\Hidden [David Winter, 1996].ch8" />
+    <None Include="games\Kaleidoscope [Joseph Weisbecker, 1978].ch8" />
+    <None Include="games\Landing.ch8" />
+    <None Include="games\Lunar Lander %28Udo Pernisz, 1979%29.ch8" />
+    <None Include="games\Mastermind FourRow %28Robert Lindley, 1978%29.ch8" />
+    <None Include="games\Merlin [David Winter].ch8" />
+    <None Include="games\Missile [David Winter].ch8" />
+    <None Include="games\Most Dangerous Game [Peter Maruhnic].ch8" />
+    <None Include="games\Nim [Carmelo Cortez, 1978].ch8" />
+    <None Include="games\Paddles.ch8" />
+    <None Include="games\Pong %281 player%29.ch8" />
+    <None Include="games\Pong %28alt%29.ch8" />
+    <None Include="games\Pong 2 %28Pong hack%29 [David Winter, 1997].ch8" />
+    <None Include="games\Pong [Paul Vervalin, 1990].ch8" />
+    <None Include="games\Programmable Spacefighters [Jef Winsor].ch8" />
+    <None Include="games\Puzzle.ch8" />
+    <None Include="games\Reversi [Philip Baltzer].ch8" />
+    <None Include="games\Rocket Launch [Jonas Lindstedt].ch8" />
+    <None Include="games\Rocket Launcher.ch8" />
+    <None Include="games\Rocket [Joseph Weisbecker, 1978].ch8" />
+    <None Include="games\Rush Hour [Hap, 2006] %28alt%29.ch8" />
+    <None Include="games\Rush Hour [Hap, 2006].ch8" />
+    <None Include="games\Russian Roulette [Carmelo Cortez, 1978].ch8" />
+    <None Include="games\Sequence Shoot [Joyce Weisbecker].ch8" />
+    <None Include="games\Shooting Stars [Philip Baltzer, 1978].ch8" />
+    <None Include="games\Slide [Joyce Weisbecker].ch8" />
+    <None Include="games\Soccer.ch8" />
+    <None Include="games\Space Flight.ch8" />
+    <None Include="games\Space Intercept [Joseph Weisbecker, 1978].ch8" />
+    <None Include="games\Space Invaders [David Winter] %28alt%29.ch8" />
+    <None Include="games\Space Invaders [David Winter].ch8" />
+    <None Include="games\Spooky Spot [Joseph Weisbecker, 1978].ch8" />
+    <None Include="games\Squash [David Winter].ch8" />
+    <None Include="games\Submarine [Carmelo Cortez, 1978].ch8" />
+    <None Include="games\Sum Fun [Joyce Weisbecker].ch8" />
+    <None Include="games\Syzygy [Roy Trevino, 1990].ch8" />
+    <None Include="games\Tank.ch8" />
+    <None Include="games\Tapeworm [JDR, 1999].ch8" />
+    <None Include="games\Tetris [Fran Dachille, 1991].ch8" />
+    <None Include="games\Tic-Tac-Toe [David Winter].ch8" />
+    <None Include="games\Timebomb.ch8" />
+    <None Include="games\Tron.ch8" />
+    <None Include="games\UFO [Lutz V, 1992].ch8" />
+    <None Include="games\Vers [JMN, 1991].ch8" />
+    <None Include="games\Vertical Brix [Paul Robson, 1996].ch8" />
+    <None Include="games\Wall [David Winter].ch8" />
+    <None Include="games\Wipe Off [Joseph Weisbecker].ch8" />
+    <None Include="games\Worm V4 [RB-Revival Studios, 2007].ch8" />
+    <None Include="games\X-Mirror.ch8" />
+    <None Include="games\ZeroPong [zeroZshadow, 2007].ch8" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
